@@ -14,5 +14,4 @@ def return_factorial():
     for i in list_of_integers:
         factorial = factorial*i
     print(factorial)
-    
-return_factorial()   
+ 
