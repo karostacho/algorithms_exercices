@@ -2,10 +2,10 @@ import pandas as pd
 
 def filter_table_by_banking_sector():
 	try:
-		df = pd.read_csv('wig20.csv')
+		df = pd.read_csv('API_exercise/wig20.csv')
 		filtered_table = df[df['Sector'] == 'Banking']
 		return filtered_table
-	except FileNotFoundError as e:
+	except FileNotFoundError or PermissionError or Exception as e:
 		print(e)
 		return pd.DataFrame([])
 
